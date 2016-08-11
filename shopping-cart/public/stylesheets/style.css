@@ -1,6 +1,8 @@
 .thumbnail img{ max-height: 200px;
 max-width: 200px;
 }
+
+
 .thumbnail .description{
   color: black;
 }

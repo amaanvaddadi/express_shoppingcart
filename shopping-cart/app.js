@@ -6,9 +6,14 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var expressHbs = require('express-handlebars');
 var routes = require('./routes/index');
-
+var mongoose = require('mongoose');
 var app = express();
+var database = require('./config/db')
 
+mongoose.connect(database.mongoUri(), function (err) {
+  if(err) console.log("error");
+  console.log("Awesome! DB connected");
+});
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout:'layout', extname:'.hbs' }));
 app.set('view engine', '.hbs');
