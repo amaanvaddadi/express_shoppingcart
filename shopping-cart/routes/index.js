@@ -5,6 +5,7 @@ var seed = require('../seed/product-seeder');
 var csrf = require('csurf');
 
 var csrfProtection = csrf();
+router.use(csrfProtection);
 /* GET home page. */
 
 router.get('/seed', function(req,res){
