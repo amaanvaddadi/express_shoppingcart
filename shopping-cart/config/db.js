@@ -5,6 +5,4 @@ function mongoUri() {
   return process.env.MONGODB_URI;
 }
 
-module.exports ={
-mongoUri
-}
+module.exports = {mongoUri}

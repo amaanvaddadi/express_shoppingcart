@@ -1,108 +1,20 @@
 {{#each products }}
 
   <div class="row">
-<!-- pro-slim data-->
        {{#each this}}
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="{{this.image}}" alt="..." class ="img-responsive">
       <div class="caption">
-        <h3>Professional Wallet</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
+        <h3>{{this.title}}</h3>
+        <p class="description">{{this.description}}</p>
         <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
+          <div class="price">${{this.price}}</div>
+          <a href="#" class="btn btn-success pull-right" role="button">Add to Shpping Cart</a>
         </div>
       </div>
     </div>
   </div>
-
- <!--  travelwallet Data-->
-
-<!--
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/images/Travel%207.JPG" alt="..." class ="img-responsive">
-      <div class="caption">
-        <h3>Travellers Wallet</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
-        <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
--->
-
-<!--party wallet data-->
-<!--
-  <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/images/Party%204(WEB).jpg" alt="..." class ="img-responsive">
-      <div class="caption">
-        <h3>Minimalist fold</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
-        <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
--->
  {{/each}}
 </div>
  {{/each}}
-
-
- <div class="row">
-<!-- pro-slim data-->
-    <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="http://raoholdingsltd.com/files/Sports%205.JPG" alt="..." class ="img-responsive">
-      <div class="caption">
-        <h3>Professional Wallet</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
-        <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-
- <!--  travelwallet Data-->
-<!--
-   <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/images/Travel%207.JPG" alt="..." class ="img-responsive">
-      <div class="caption">
-        <h3>Travellers Wallet</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
-        <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-<!--party wallet data-->
-  <!-- <div class="col-sm-6 col-md-4">
-    <div class="thumbnail">
-      <img src="/images/Party%204(WEB).jpg" alt="..." class ="img-responsive">
-      <div class="caption">
-        <h3>Minimalist fold</h3>
-        <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
-        <div class="clearfix">
-          <div class="price">$20</div>
-          <a href="#" class="btn btn-success pull-right" role="button">Button</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-</div> -->
