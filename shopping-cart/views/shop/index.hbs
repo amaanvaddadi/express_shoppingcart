@@ -1,12 +1,11 @@
 {{#each products }}
-     Product!
 
- {{/each}}
-   <div class="row">
+  <div class="row">
 <!-- pro-slim data-->
+       {{#each this}}
     <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
-      <img src="/images/Pro1.JPG" alt="..." class ="img-responsive">
+      <img src="{{this.image}}" alt="..." class ="img-responsive">
       <div class="caption">
         <h3>Professional Wallet</h3>
         <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, tenetur, voluptatem. Officiis sint dicta dolorem. Eos laborum eius optio necessitatibus vero quia eum maxime harum tempore sapiente. Ad, possimus, ab.</p>
@@ -20,6 +19,7 @@
 
  <!--  travelwallet Data-->
 
+<!--
    <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="/images/Travel%207.JPG" alt="..." class ="img-responsive">
@@ -33,8 +33,10 @@
       </div>
     </div>
   </div>
+-->
 
 <!--party wallet data-->
+<!--
   <div class="col-sm-6 col-md-4">
     <div class="thumbnail">
       <img src="/images/Party%204(WEB).jpg" alt="..." class ="img-responsive">
@@ -48,8 +50,11 @@
       </div>
     </div>
   </div>
-
+-->
+ {{/each}}
 </div>
+ {{/each}}
+
 
  <div class="row">
 <!-- pro-slim data-->
@@ -66,6 +71,7 @@
       </div>
     </div>
   </div>
+</div>
 
 
  <!--  travelwallet Data-->
