@@ -20,6 +20,8 @@ mongoose.connect(database.mongoUri(), function (err) {
   if(err) console.log("error");
   console.log("Awesome! DB connected");
 });
+
+require('./config/passport')
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout:'layout', extname:'.hbs' }));
 app.set('view engine', '.hbs');
@@ -34,7 +36,6 @@ app.use(session({secret: 'mysupersecret', resave: false, saveUninitialized: fals
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
-
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
