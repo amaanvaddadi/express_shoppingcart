@@ -8,6 +8,7 @@ var expressHbs = require('express-handlebars');
 var routes = require('./routes/index');
 var mongoose = require('mongoose');
 var database = require('./config/db')
+var session = require('express-session')
 var app = express();
 
 

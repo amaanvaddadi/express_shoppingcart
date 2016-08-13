@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var Product = require('../models/product');
 var seed = require('../seed/product-seeder');
+var csrf = require('csurf');
+
+var csrfProtection = csrf();
 /* GET home page. */
 
 router.get('/seed', function(req,res){
@@ -22,6 +25,10 @@ router.get('/', function(req, res, next) {
     });
 });
 
+router.get('/user/signup', function (req,res,next){
+
+  res.render('user/signup', {csrfToken: req.csrfToken()})
+});
 
 
 
