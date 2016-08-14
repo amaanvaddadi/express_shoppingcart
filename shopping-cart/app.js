@@ -11,7 +11,7 @@ var database = require('./config/db');
 var session = require('express-session');
 var passport = require('passport');
 var flash = require('connect-flash');
-
+var validator = require('express-validator');
 
 var app = express();
 
@@ -21,7 +21,7 @@ mongoose.connect(database.mongoUri(), function (err) {
   console.log("Awesome! DB connected");
 });
 
-require('./config/passport')
+require('./config/passport');
 // view engine setup
 app.engine('.hbs', expressHbs({defaultLayout:'layout', extname:'.hbs' }));
 app.set('view engine', '.hbs');
@@ -31,6 +31,7 @@ app.set('view engine', '.hbs');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(validator());
 app.use(cookieParser());
 app.use(session({secret: 'mysupersecret', resave: false, saveUninitialized: false}));
 app.use(flash());
