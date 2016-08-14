@@ -48,9 +48,9 @@ passport.use('local.signup', new LocalStrategy({
     });
 }));
 
-// Sign in Strategy
+// lines 53 -80: Sign in Strategy
 
-passport.use('local.signup', new LocalStrategy({
+passport.use('local.signin', new LocalStrategy({
   usernameField: 'email',
   password: 'password',
   passReqToCallback: true
@@ -73,16 +73,8 @@ passport.use('local.signup', new LocalStrategy({
         return done(null, false, {message: 'No user found.'});
       }
       if (!user.validPassword(password)) {
-        return done(null, false, {message: 'No user found.'});
+        return done(null, false, {message: 'Wrong Password.'});
       }
-      var newUser = new User();
-      newUser.email = email;
-      newUser.password = newUser.encryptPassword(password);
-      newUser.save(function (err, result) {
-        if(err) {
-          return done(err);
-        }
-          return done(null, newUser);
-      });
+      return done(null, user);
     });
 }));
