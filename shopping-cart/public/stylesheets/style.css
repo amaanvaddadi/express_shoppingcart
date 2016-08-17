@@ -1,5 +1,5 @@
-.thumbnail img{ max-height: 200px;
-max-width: 200px;
+.thumbnail img{ max-height: 180px;
+max-width: 180px;
 }
 
 
@@ -12,4 +12,32 @@ max-width: 200px;
 .price {
   font-weight: bold;
   font-size: 16px;
+}
+
+
+
+  #logo-main {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+  }
+
+
+.navbar-header{
+  background: transparent;
+  border: none;
+/*
+  .navbar-nav {
+    width: 100%;
+    text-align: center;
+    > li {
+      display: inline-block;
+      float: none;
+      > a {
+        padding-left: 30px;
+        padding-right: 30px;
+        }
+    }
+  }*/
 }
