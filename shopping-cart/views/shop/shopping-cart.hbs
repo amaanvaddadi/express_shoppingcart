@@ -5,6 +5,9 @@
         {{#each products}}
             <li class="list-group-item">
               <span class="badge">{{this.qty}}</span>
+              <div class="thumbnail">
+                <img src="{{this.item.image}}" alt="..." class ="img-responsive">
+                <div class="caption">
               <strong>{{this.item.title}}</strong>
               <span class="label label-success">${{this.price}}</span>
               <div class="btn-group">
