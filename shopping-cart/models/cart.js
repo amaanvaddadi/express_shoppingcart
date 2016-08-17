@@ -1,7 +1,7 @@
 module.exports = function Cart(oldCart) {
-  this.items = oldCart.items;
-  this.totalQty = oldCart.totalQty;
-  this.totalPrice = oldCart.totalPrice;
+  this.items = oldCart.items || {};
+  this.totalQty = oldCart.totalQty || 0;
+  this.totalPrice = oldCart.totalPrice || 0;
 
 // add function adds new and existing items to the shopping cart
   this.add = function (item, id) {
@@ -13,7 +13,7 @@ module.exports = function Cart(oldCart) {
     storedItem.qty++;
     storedItem.price = storedItem.item.price * storedItem.qty;
     this.totalQty++;
-    this.totalPrice += storedItem.price;
+    this.totalPrice += storedItem.item.price;
   }
 // generateArray function creates an array of items purchased.
   this.generateArray = function () {
