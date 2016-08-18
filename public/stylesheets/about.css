@@ -1,0 +1,31 @@
+.header{
+  margin: 20px;
+  text-align: center;
+  color: black;
+  border: 2px solid #ddd;
+
+}
+
+.img-responsive{
+  text-align: center;
+
+  display:inline-block;
+  margin: 20px;
+
+
+}
+
+p {
+
+  margin: 20px;
+
+}
+
+h4{
+
+  margin:20px;
+}
+
+.address{
+  margin: 20px;
+}

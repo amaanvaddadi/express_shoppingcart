@@ -56,6 +56,10 @@ app.use(function (req,res,next) {
 app.use('/user', userRoutes);
 app.use('/', routes);
 
+app.get('/about', function(req,res) {
+  res.render('shop/about')
+})
+
 
 
 // catch 404 and forward to error handler
